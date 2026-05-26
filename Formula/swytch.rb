@@ -5,21 +5,21 @@
 class Swytch < Formula
   desc "Distributed cache and database with Redis, Memcached, and SQL frontends"
   homepage "https://github.com/swytchdb/swytch"
-  version "1.0.2-beta1"
+  version "1.0.3"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/swytchdb/swytch/releases/download/v1.0.2-beta1/swytch_1.0.2-beta1_darwin_x86_64.tar.gz"
-      sha256 "53665709df24d36733556a84c915da29d1b08325243f4885a0f772e29f0a44d5"
+      url "https://github.com/swytchdb/swytch/releases/download/v1.0.3/swytch_1.0.3_darwin_x86_64.tar.gz"
+      sha256 "4c459d674beaf68c216a1260d1d219481325210d987894a0dd0622d731a594c2"
 
       define_method(:install) do
         bin.install "swytch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/swytchdb/swytch/releases/download/v1.0.2-beta1/swytch_1.0.2-beta1_darwin_arm64.tar.gz"
-      sha256 "30746687b292e5dc0d4c2ab1583300560f8281afb78efb561d1482a6622aace7"
+      url "https://github.com/swytchdb/swytch/releases/download/v1.0.3/swytch_1.0.3_darwin_arm64.tar.gz"
+      sha256 "61491380eb3b8e636131c483286c1d3cdbb2ce42edf488a57b05f59e5ff22e09"
 
       define_method(:install) do
         bin.install "swytch"
@@ -29,15 +29,15 @@ class Swytch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/swytchdb/swytch/releases/download/v1.0.2-beta1/swytch_1.0.2-beta1_linux_x86_64.tar.gz"
-      sha256 "4459396077dee998ac2f89aad4204eb87a37bde6278665c79c761c1a67feaadc"
+      url "https://github.com/swytchdb/swytch/releases/download/v1.0.3/swytch_1.0.3_linux_x86_64.tar.gz"
+      sha256 "c40689ac6d4eadf8c149c4c7e5a63b60e91be9e324bf76b2f544292dcbb07609"
       define_method(:install) do
         bin.install "swytch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/swytchdb/swytch/releases/download/v1.0.2-beta1/swytch_1.0.2-beta1_linux_arm64.tar.gz"
-      sha256 "65392aeaf9fae1730244b1ab333c9b3ab6b408ec5c60b27707bd4f8ea4b28f93"
+      url "https://github.com/swytchdb/swytch/releases/download/v1.0.3/swytch_1.0.3_linux_arm64.tar.gz"
+      sha256 "36a6ea7bff6259cf821578192224cec1641c1d27bdcc625fbe7f4983d754f0cf"
       define_method(:install) do
         bin.install "swytch"
       end
